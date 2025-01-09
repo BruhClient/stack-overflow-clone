@@ -1,16 +1,33 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import {  Gasoek_One, Shanti, Ubuntu } from 'next/font/google'
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import Navbar from "@/components/Navbar";
+import QuestionButton from "@/components/buttons/QuestionButton";
+import { Toaster } from "@/components/ui/toaster";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const shanti = Shanti({
+  subsets: ['latin'],
+  weight:["400"], 
+  variable: '--font-shanti',
+})
+
+const ubuntu = Ubuntu({
+  subsets :["latin"] , 
+  weight:["400"], 
+  variable :"--font-ubuntu"
+})
+
+
+const GaseokOne = Gasoek_One({ 
+  subsets :["latin"], 
+  weight:["400"], 
+  variable : "--font-geseok"
+})
+
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,16 +36,37 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  authModal
 }: Readonly<{
   children: React.ReactNode;
+  authModal: React.ReactNode
 }>) {
+
+ 
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en"  className={`${shanti.variable}  ${ubuntu.variable} ${GaseokOne.variable} font-body `} suppressHydrationWarning>
+
+        
+        <body>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            
+            
+            
+          
+          > 
+            <QuestionButton />
+            <Navbar />
+            <Toaster /> 
+            {authModal}
+            <main className="pt-[60px]">
+             {children}
+            </main>
+            
+          </ThemeProvider>
+        </body>
     </html>
   );
 }
