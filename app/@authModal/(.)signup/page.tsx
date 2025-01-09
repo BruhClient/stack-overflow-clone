@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic"
+
 import CloseModal from "@/components/modals/closeModal";
 import SignUp from "@/components/modals/signup";
  

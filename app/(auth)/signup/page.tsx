@@ -1,6 +1,7 @@
 
 import SignUp from "@/components/modals/signup";
 
+export const dynamic = "force-dynamic"
 
  
 const SignUpPage = () => {
