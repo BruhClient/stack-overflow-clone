@@ -5,7 +5,7 @@ import { FunctionComponent, useEffect, useRef, useState } from "react";
 
 import {useIntersection} from "@mantine/hooks"
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { INFINITE_SCROLLING_PAGINATION_RESULTS } from "@/config";
+import { INFINITE_SCROLLING_PAGINATION_RESULTS } from "@/config/feed";
 import axios from "axios";
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 import QuestionCard from "./QuestionCard";
