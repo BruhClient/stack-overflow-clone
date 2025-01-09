@@ -10,7 +10,7 @@ import {
   import { Input } from "@/components/ui/input"
   import { Label } from "@/components/ui/label"
 import { Session } from "next-auth";
-import { FunctionComponent, useEffect, useState } from "react";
+import { Dispatch, FunctionComponent, SetStateAction, useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import { useToast } from "@/hooks/use-toast";
 import {useMutation} from "@tanstack/react-query"
@@ -20,7 +20,7 @@ import { useRouter } from "next/navigation";
 interface UsernameModalProps {
     session:Session, 
     isOpen : boolean , 
-    setOpen : Function ; 
+    setOpen : Dispatch<SetStateAction<boolean>> ; 
 }
  
 const UsernameModal: FunctionComponent<UsernameModalProps> = ({session,isOpen,setOpen}) => {

@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from "react";
+import { Dispatch, FunctionComponent, SetStateAction, useState } from "react";
  
 
 
@@ -6,7 +6,7 @@ import { FunctionComponent, useState } from "react";
 interface TagProps {
     text: string , 
     className? : string, 
-    accountTagFn : Function, 
+    accountTagFn : (isPressed : boolean, text:string) => void, 
     color? : string 
 }
  
