@@ -48,7 +48,7 @@ const UserAvatar: FunctionComponent<UserAvatarProps> = ({session}) => {
     return ( <Dialog open={open} onOpenChange={setOpen}><DropdownMenu >
         <DropdownMenuTrigger asChild>
             <Avatar >
-            <AvatarImage src={session.user.image} alt="@shadcn" className="rounded-full w-10 "/>
+            <AvatarImage src={session.user.image ? session.user.image : undefined} alt="@shadcn" className="rounded-full w-10 "/>
             <AvatarFallback >Profile</AvatarFallback>
             </Avatar>
         </DropdownMenuTrigger>
