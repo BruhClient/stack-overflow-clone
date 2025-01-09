@@ -36,10 +36,6 @@ function CustomHeaderRenderer ({data} : any) {
     return <div className="text-2xl ">{data.text}</div>
 }
 
-function CustomParagraphRenderer ({data} : any) { 
-    console.log(data)
-    return <div className="">{data.text}</div>
-}
 const renderers = { 
     code : CustomCodeRenderer, 
     header : CustomHeaderRenderer

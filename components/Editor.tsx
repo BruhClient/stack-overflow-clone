@@ -49,7 +49,7 @@ const Editor: FunctionComponent<EditorProps> = ({ref,placeholder="Enter your des
     
 
 
-    },[ref])
+    },[ref,placeholder])
 
     useEffect(() => {
 
