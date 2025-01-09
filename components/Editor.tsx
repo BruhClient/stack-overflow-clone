@@ -1,6 +1,6 @@
 "use client"
 import "../styles/editor.css"
-import { FunctionComponent, useCallback, useEffect, useRef, useState } from 'react';
+import { FunctionComponent, useCallback, useEffect} from 'react';
 import Header from "@editorjs/header"
 import List from "@editorjs/list"
 import CodeTool from '@editorjs/code';
