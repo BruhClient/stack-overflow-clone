@@ -15,6 +15,7 @@ import { useRouter } from "next/navigation";
 import Tag from "@/components/Tag";
 import { LanguageTags,DifficultyTags } from "@/config/tag";
 import Link from "next/link";
+import type EditorJS from "@editorjs/editorjs";
 
 
 
@@ -103,7 +104,7 @@ const CreateQuestionPage = () => {
     })
     
     
-    const ref = useRef<EditorJS>()
+    const ref = useRef<EditorJS>(null)
 
     
 
@@ -122,10 +123,11 @@ const CreateQuestionPage = () => {
     const onSubmit = async  (data : QuestionRequest) => {
 
 
-        const editor = await ref.current.save()
-        const blocks = editor
-
-        if (blocks.length === 0 ) { 
+        const editor = await ref.current?.save()
+        const blocks = editor?.blocks
+        
+        
+        if ( !blocks || blocks?.length === 0 ) { 
             return toast({
                 title : "Please provide a description" , 
                 description:"Show examples and possible solutions . This will increase the chances of a solution being found !", 

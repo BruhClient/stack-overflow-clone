@@ -9,14 +9,14 @@ import { AnswerRequest } from "@/validator/answer";
 import axios, { AxiosError } from "axios";
 import { Link } from "lucide-react";
 import { useRouter } from "next/navigation";
-
+import type EditorJS from "@editorjs/editorjs";
 interface AnswerEditorProps {
     id : string
 }
  
 const AnswerEditor: FunctionComponent<AnswerEditorProps> = ({id}) => {
 
-    const ref = useRef<EditorJS>()
+    const ref = useRef<EditorJS>(null)
     const {toast} = useToast()
 
     const router = useRouter()
@@ -79,10 +79,10 @@ const AnswerEditor: FunctionComponent<AnswerEditorProps> = ({id}) => {
 
         const value = await ref.current?.save()
         
-        const blocks = value.blocks
+        const blocks = value?.blocks
 
 
-        if (blocks.length === 0 ) { 
+        if (!blocks || blocks.length === 0 ) { 
             return toast({ 
                 title : "Empty Answer" ,  
                 description : "Answer input cannot be blank", 
