@@ -27,6 +27,8 @@ const QuestionDetailPage = async ({params} : QuestionDetailPageProps) => {
         }
     })
 
+
+    
     const votesAmt = question?.QuestionVotes.reduce((acc,{vote}) => {
 
 
@@ -41,6 +43,7 @@ const QuestionDetailPage = async ({params} : QuestionDetailPageProps) => {
 
     const currentVote = question?.QuestionVotes.find(({userId}) => userId === session?.user.id  )
 
+    
 
 
     

@@ -29,7 +29,7 @@ const UsernameModal: FunctionComponent<UsernameModalProps> = ({session,isOpen,se
 
 
     const router = useRouter()
-    const {mutate : changeUsername} = useMutation({ 
+    const {mutate : changeUsername,isPending} = useMutation({ 
         mutationFn : async({username} : UsernameRequest) => {
 
             const payload : UsernameRequest = {
@@ -107,7 +107,7 @@ const UsernameModal: FunctionComponent<UsernameModalProps> = ({session,isOpen,se
           </div>
         </div>
         <DialogFooter>
-          <Button type="submit" onClick={() => changeUsername({username : input})}>Save changes</Button>
+          <Button type="submit" disabled={isPending} onClick={() => changeUsername({username : input})}>Save changes</Button>
         </DialogFooter>
       </DialogContent> );
 }

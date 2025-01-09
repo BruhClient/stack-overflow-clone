@@ -1,7 +1,6 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 "use client"
 
-
 import dynamic from "next/dynamic";
 import { FunctionComponent } from "react";
 
@@ -23,7 +22,6 @@ interface EditorOutputProps {
 
 function CustomCodeRenderer ({data} : any) { 
    
-    console.log(data)
     return ( 
         <pre className="bg-card rounded-md py-4 w-fit px-6 my-4 ">
             <code className="text-foreground text-sm">{data.code}</code>
@@ -33,32 +31,36 @@ function CustomCodeRenderer ({data} : any) {
 
 
 function CustomHeaderRenderer ({data} : any) { 
-    console.log(data)
     return <div className="text-2xl ">{data.text}</div>
+}
+
+
+function CustomParagraphRenderer ({data} : any) { 
+    return <div className="text-lg ">{data.text}</div>
 }
 
 const renderers = { 
     code : CustomCodeRenderer, 
-    header : CustomHeaderRenderer
+    header : CustomHeaderRenderer, 
+    paragraph : CustomParagraphRenderer , 
 
 }
 
 
 
-const style = {
-   
-  };
 
 
 const EditorOutput: FunctionComponent<EditorOutputProps> = ({content}) => {
-    
+ 
     console.log(content)
+
+    
     return (
         
 
         <div className=" flex flex-col ">
             <div>
-                <Output style={style} data={content} renderers={renderers}/>
+                <Output data={content} renderers={renderers}/>
             </div>
             
         </div>

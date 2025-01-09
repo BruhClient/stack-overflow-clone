@@ -40,7 +40,7 @@ const CreateQuestionPage = () => {
     }
 
     
-    const {mutate:createQns} = useMutation({ 
+    const {mutate:createQns,isPending} = useMutation({ 
         mutationFn : async ({content,title,tags} : QuestionRequest) => {
 
 
@@ -135,7 +135,7 @@ const CreateQuestionPage = () => {
             })
         }
 
-        createQns({content:blocks, title : data.title, tags})
+        createQns({content:editor, title : data.title, tags})
 
      }
 
@@ -201,7 +201,7 @@ const CreateQuestionPage = () => {
             </div>
             <div className="flex  items-end">
 
-                <Button className="w-full mb-2 z-50" type="submit" >Post</Button>
+                <Button className="w-full mb-2 z-50" type="submit" disabled={isPending}  >Post</Button>
 
             </div>
         </div>
