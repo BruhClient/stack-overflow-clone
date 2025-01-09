@@ -1,7 +1,6 @@
 "use client"
 
 
-import { table } from "console";
 import dynamic from "next/dynamic";
 import { FunctionComponent } from "react";
 
@@ -31,10 +30,6 @@ function CustomCodeRenderer ({data} : any) {
     )
 }
 
-function CustomTableRenderer ({data} : any) { 
-    
-    return <div>Table</div>
-}
 
 function CustomHeaderRenderer ({data} : any) { 
     console.log(data)

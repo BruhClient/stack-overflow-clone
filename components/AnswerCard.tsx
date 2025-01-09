@@ -1,6 +1,6 @@
 
 import { db } from "@/lib/db";
-import { FunctionComponent, RefObject } from "react";
+import { FunctionComponent } from "react";
 import AnswerVoteClient from "./AnswerVote";
 import { getAuthSession } from "@/lib/auth";
 import EditorOutput from "./EditorOutput";

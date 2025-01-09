@@ -1,5 +1,4 @@
-import { FunctionComponent, useEffect, useState } from "react";
-import { Bold } from "lucide-react"
+import { FunctionComponent, useState } from "react";
  
 
 

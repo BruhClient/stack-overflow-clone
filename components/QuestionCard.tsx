@@ -3,9 +3,9 @@
 import { LanguageTags } from "@/config/tag";
 import { formatTimeToNow } from "@/utils/time";
 import { QuestionTag } from "@prisma/client";
-import { MessageCircle, MessageCircleIcon, MessageSquareText, ThumbsDown, ThumbsUp } from "lucide-react";
+import { MessageSquareText, ThumbsDown, ThumbsUp } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { FunctionComponent, RefObject } from "react";
+import { FunctionComponent } from "react";
 
 interface QuestionCardProps {
     title : string , 

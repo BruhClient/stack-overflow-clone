@@ -18,8 +18,8 @@ import {
 
  
 import { Session } from "next-auth";
-import { FunctionComponent, useEffect, useState } from "react";
-import { signOut, useSession } from "next-auth/react";
+import { FunctionComponent, useState } from "react";
+import { signOut } from "next-auth/react";
 
 import UsernameModal from "./modals/username";
 import { useRouter } from "next/navigation";

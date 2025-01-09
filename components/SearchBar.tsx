@@ -7,8 +7,6 @@
     CommandInput,
     CommandItem,
     CommandList,
-    CommandSeparator,
-    CommandShortcut,
   } from "@/components/ui/command"
 import { useEffect, useState } from "react"
 import { useDebounce } from "@/hooks/useDebouse"

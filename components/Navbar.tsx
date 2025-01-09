@@ -2,7 +2,6 @@ import LoginButton from "./buttons/LoginButton";
 import {Logo} from "./Logo";
 import SearchBar from "./SearchBar";
 import SignupButton from "./buttons/SignupButton";
-import { Button } from "./ui/button";
 import { getAuthSession } from "@/lib/auth";
 import UserAvatar from "./UserAvatar";
 

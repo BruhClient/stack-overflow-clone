@@ -1,7 +1,7 @@
 "use client"
 
 import { useToast } from "@/hooks/use-toast";
-import { AnswerVoteRequest, QuestionVoteRequest } from "@/validator/vote";
+import { AnswerVoteRequest } from "@/validator/vote";
 import { usePrevious } from "@mantine/hooks";
 import { Vote } from "@prisma/client";
 import { useMutation } from "@tanstack/react-query";

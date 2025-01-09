@@ -100,11 +100,11 @@ const PostFeed: FunctionComponent<PostFeedProps> = () => {
                     if (index === questions.length -1) { 
 
                         return ( <div ref={ref} key={id}>
-                            <QuestionCard id={id} key={id} title={title} author={author.username} createdAt={createdAt} count={_count.Answers} tags={QuestionTags} voteAmt={voteAmt}/>
+                            <QuestionCard id={id} key={id} title={title} author={author.username!} createdAt={createdAt} count={_count.Answers} tags={QuestionTags} voteAmt={voteAmt}/>
                         </div>) 
                         
                     }   
-                    return <QuestionCard id={id} key={id} title={title} author={author.username} createdAt={createdAt} count={_count.Answers} tags={QuestionTags} voteAmt={voteAmt}/>
+                    return <QuestionCard id={id} key={id} title={title} author={author.username!} createdAt={createdAt} count={_count.Answers} tags={QuestionTags} voteAmt={voteAmt}/>
                     })}
                 </Masonry>
 
