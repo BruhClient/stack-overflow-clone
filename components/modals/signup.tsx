@@ -3,6 +3,7 @@ import GoogleButton from "../buttons/GoogleButton";
 import GitHubButton from "../buttons/GithubButton";
 import {BigLogo} from "../Logo";
 
+export const dynamic = "force-dynamic"
  
 const SignUp = () => {
     return ( 
