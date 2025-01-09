@@ -1,3 +1,4 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 "use client"
 import "../styles/editor.css"
 import { FunctionComponent, useCallback, useEffect} from 'react';

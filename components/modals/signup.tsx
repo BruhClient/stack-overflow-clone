@@ -1,6 +1,5 @@
 
 import GoogleButton from "../buttons/GoogleButton";
-import { FunctionComponent } from "react";
 import GitHubButton from "../buttons/GithubButton";
 import {BigLogo} from "../Logo";
 
