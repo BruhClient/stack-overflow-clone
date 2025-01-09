@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'; 
+
 import Login from "@/components/modals/login";
 
 const LoginPage = () => {
