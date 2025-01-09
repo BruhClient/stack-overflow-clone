@@ -56,6 +56,7 @@ const authOptions:NextAuthOptions =  {
         }, 
         async session({session,token}) { 
 
+    
 
             if (token) { 
                 session.user.id = token.id

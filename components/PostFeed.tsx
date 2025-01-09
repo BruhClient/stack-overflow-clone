@@ -13,7 +13,7 @@ import QuestionCard from "./QuestionCard";
 
 interface PostFeedProps {
     
-    subredditName? : string,
+    subredditName? : string,    
 }
  
 const PostFeed: FunctionComponent<PostFeedProps> = () => {
