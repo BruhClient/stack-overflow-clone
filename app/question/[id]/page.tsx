@@ -1,7 +1,6 @@
 
 import AnswerCard from "@/components/AnswerCard";
 import AnswerEditor from "@/components/AnswerEditor";
-import Editor from "@/components/Editor";
 import EditorOutput from "@/components/EditorOutput";
 import QuestionVoteClient from "@/components/QuestionVote";
 import { getAuthSession } from "@/lib/auth";

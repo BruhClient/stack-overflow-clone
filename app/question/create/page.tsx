@@ -1,6 +1,6 @@
 "use client"
 
-import { FunctionComponent, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Editor  from "@/components/Editor"
 import { Label } from "@radix-ui/react-dropdown-menu";
 import TextareaAutosize from 'react-textarea-autosize';
@@ -18,11 +18,9 @@ import Link from "next/link";
 
 
 
-interface CreateQuestionPageProps {
-    
-}
+
  
-const CreateQuestionPage: FunctionComponent<CreateQuestionPageProps> = () => {
+const CreateQuestionPage = () => {
 
     const {toast} = useToast()
     const router = useRouter()

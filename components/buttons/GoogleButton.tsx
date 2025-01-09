@@ -1,6 +1,5 @@
 "use client"
 
-import { useRouter } from "next/navigation"
 import { Button } from "../ui/button"
 import {signIn} from  "next-auth/react"
 import { useState } from "react"

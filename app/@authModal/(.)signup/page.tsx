@@ -1,4 +1,4 @@
-import Login from "@/components/modals/login";
+
 import CloseModal from "@/components/modals/closeModal";
 import SignUp from "@/components/modals/signup";
  

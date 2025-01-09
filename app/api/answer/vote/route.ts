@@ -1,6 +1,6 @@
 import { getAuthSession } from "@/lib/auth"
 import { db } from "@/lib/db"
-import { AnswerVoteValidator, QuestionVoteValidator } from "@/validator/vote"
+import { AnswerVoteValidator } from "@/validator/vote"
 import { z } from "zod"
 
 export async function PATCH(req :Request) { 

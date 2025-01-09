@@ -25,7 +25,6 @@ import { useRouter } from "next/navigation"
       isFetching,
       data: queryResults,
       refetch,
-      isFetched,
     } = useQuery({
       queryFn: async () => {
         if (!debounceValue) return []
