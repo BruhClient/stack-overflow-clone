@@ -8,9 +8,9 @@ import { db } from "@/lib/db";
 
 
 interface QuestionDetailPageProps {
-    params : { 
+    params : Promise<{ 
         id : string 
-    }
+    }> 
 }
  
 const QuestionDetailPage = async ({params} : QuestionDetailPageProps) => {
